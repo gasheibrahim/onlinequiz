@@ -21,7 +21,10 @@
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="css/swiper.min.css">
-
+    <a href="https://icons8.com/icon/68165/family"></a>
+    <a href="https://icons8.com/icon/67473/home"></a>
+    <a href="https://icons8.com/icon/105096/church"></a>
+    <a href="https://icons8.com/icon/MJH-YT0Jjypw/graduation-cap"></a>
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
@@ -67,7 +70,7 @@
                         <div class="col-3 col-lg-9 flex justify-content-end align-content-center">
                             <nav class="site-navigation flex justify-content-end align-items-center">
                                 <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
-                                    <li class="current-menu-item"><a href="index.html">Home</a></li>
+                                    <li class="current-menu-item"><a href="index.php">Home</a></li>
                                     <li><a href="about.php">About</a></li>
                                     <li><a href="contact.php">Contact</a></li>
                                 </ul>
@@ -80,7 +83,7 @@
                                 </div><!-- .hamburger-menu -->
 
                                 <div class="header-bar-cart">
-                                    <a href="#" class="flex justify-content-center align-items-center"><span aria-hidden="true" class="icon_bag_alt"></span></a>
+                                    <a href="#" class="flex justify-content-center align-items-center"></a>
                                 </div><!-- .header-bar-search -->
                             </nav><!-- .site-navigation -->
                         </div><!-- .col -->
@@ -100,7 +103,7 @@
                             </header><!-- .entry-header -->
 
                             <div class="entry-content">
-                                <p>online exam port for restoration church located at Masoro industries zone for church member</p>
+                                <p>online exam of Evangelical Restoration church Rwanda</p>
                             </div><!-- .entry-content -->
                         </div><!-- .hero-content-wrap -->
                     </div><!-- .col -->
@@ -113,108 +116,102 @@
             <div class="flex flex-wrap align-items-stretch">
                 <div class="icon-box">
                     <div class="icon">
-                        <span class="ti-user"></span>
+                        <img src="https://img.icons8.com/carbon-copy/100/000000/graduation-cap.png"/>
                     </div><!-- .icon -->
 
                     <header class="entry-header">
-                        <h2 class="entry-title">Learn From The Experts</h2>
+                        <h2 class="entry-title">Disciples</h2>
                     </header><!-- .entry-header -->
 
                     <div class="entry-content">
-                        <p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                        <p>Jesus commissioned His Disciples to spread the word of God (Gospel) to the ends of the earth _Mathew 28:19-20. This great commission is an intergral part of the ERC vision of preparing/ raising an Army of Life givers (Disciples) fully consecrated to Jesus and ready to spread the gospel to all corners of the earth.</p>
                     </div><!-- .entry-content -->
                 </div><!-- .icon-box -->
 
                 <div class="icon-box">
                     <div class="icon">
-                        <span class="ti-folder"></span>
+                        <img src="https://img.icons8.com/carbon-copy/100/000000/church.png"/>
                     </div><!-- .icon -->
 
                     <header class="entry-header">
-                        <h2 class="entry-title">Book Library & Store</h2>
+                        <h2 class="entry-title">Fellowship</h2>
                     </header><!-- .entry-header -->
 
                     <div class="entry-content">
-                        <p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                        <p>Revelations 5:8-9 is a reflection of what we must do as Christians to worship our Lord Jesus for who he is and what he has done for us. We must do it purely and purposely without any compulsion.Let us therefore not neglect fellowship, for through this we are encouraged and strengthened in our spiritual life.</p>
                     </div><!-- .entry-content -->
                 </div><!-- .icon-box -->
 
                 <div class="icon-box">
                     <div class="icon">
-                        <span class="ti-book"></span>
+                        <img src="https://img.icons8.com/carbon-copy/100/000000/home.png"/>
                     </div><!-- .icon -->
 
                     <header class="entry-header">
-                        <h2 class="entry-title">Best Course Online</h2>
+                        <h2 class="entry-title">Home Cell</h2>
                     </header><!-- .entry-header -->
 
                     <div class="entry-content">
-                        <p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                        <p>At ERC Masoro Church, a cell group is the basic unit that forms the life of the church, it is a small group of people of ERC Masoro that do life together in their community, praying , sharing meals together and engaging in each other’s day to day life_Acts 2:46</p>
                     </div><!-- .entry-content -->
                 </div><!-- .icon-box -->
 
                 <div class="icon-box">
                     <div class="icon">
-                        <span class="ti-world"></span>
+                        <img src="https://img.icons8.com/cotton/64/000000/family.png"/>
                     </div><!-- .icon -->
 
                     <header class="entry-header">
-                        <h2 class="entry-title">Best Industry Leaders</h2>
+                        <h2 class="entry-title">Family</h2>
                     </header><!-- .entry-header -->
 
                     <div class="entry-content">
-                        <p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                        <p>Malachi 3:24 “ He will turn the hearts of the fathers to the children and the hearts of the children to their fathers...” The Church has the task of restoring people in all dimensions (spirit, soul and Body) while creating a family church within the church.</p>
                     </div><!-- .entry-content -->
                 </div><!-- .icon-box -->
             </div><!-- .row -->
         </div><!-- .container-fluid -->
-    </div><!-- .icon-boxes -->
+    </div><!-- .icon-boxes --><br><br><br><br>
 
-    <footer class="site-footer">
+    <footer class="site-footer bg-dark">
         <div class="footer-widgets">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="foot-about">
-                            <h2>Online Exam Portal</h2>
+                            <h2 style="color:#19c880;">Online Exam Portal</h2>
 
-                            <p>online exam port for restoration church located at Masoro industries zone for church member. </p>
+                            <p>online exam Evangelical Restoration church Rwanda. </p>
 
                             <p class="footer-copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Webiste is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by Emmy</a>
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Webiste is made by Emmanuel</a>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                         </div><!-- .foot-about -->
                     </div><!-- .col -->
 
                     <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
                         <div class="foot-contact">
-                            <h2>Contact Us</h2>
+                            <h2 style="color:#19c880;">Contact Us</h2>
 
                             <ul>
                                 <li>Email: emaje02@gmail.com</li>
                                 <li>Phone: (+250) 7832 45797</li>
-                                <li>Address: Masoro Church</li>
+                                <li>Address:Gasabo,Ndera,Masoro </li>
                             </ul>
                         </div><!-- .foot-contact -->
                     </div><!-- .col -->
 
                     <div class="col-12 col-md-6 col-lg-3 mt-5 mt-lg-0">
                         <div class="quick-links flex flex-wrap">
-                            <h2 class="w-100">Quick Links</h2>
+                            <h2 class="w-100" style="color:#19c880;">DEPARTMENTS</h2>
 
                             <ul class="w-50">
-                                <li><a href="#">About </a></li>
-                                <li><a href="#">Terms of Use </a></li>
-                                <li><a href="#">Privacy Policy </a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li>Family care</li>
+                                <li>Fellowship</li>
+                                <li>Discipleship </li>
+                                <li>Support Service</li>
                             </ul>
 
-                            <ul class="w-50">
-                                <li><a href="#">Documentation</a></li>
-                                <li><a href="#">Forums</a></li>
-                                <li><a href="#">Language Packs</a></li>
-                                <li><a href="#">Release Status</a></li>
-                            </ul>
                         </div><!-- .quick-links -->
                     </div><!-- .col -->
 
@@ -222,49 +219,6 @@
             </div><!-- .container -->
         </div><!-- .footer-widgets -->
     </footer><!-- .site-footer -->
-    <!-- <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header border-bottom-0">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="form-title text-center">
-          <h4>Login</h4>
-        </div>
-        <div class="d-flex flex-column text-center">
-          <form>
-            <div class="form-group">
-              <input type="email" class="form-control" id="email1"placeholder="Your email address...">
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control" id="password1" placeholder="Your password...">
-            </div>
-            <button type="button" class="btn btn-info btn-block btn-round">Login</button>
-          </form>
-          
-          <div class="text-center text-muted delimiter">or use a social network</div>
-          <div class="d-flex justify-content-center social-buttons">
-            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Twitter">
-              <i class="fab fa-twitter"></i>
-            </button>
-            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Facebook">
-              <i class="fab fa-facebook"></i>
-            </button>
-            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Linkedin">
-              <i class="fab fa-linkedin"></i>
-            </button>
-          </di>
-        </div>
-      </div>
-    </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <div class="signup-section">Not a member yet? <a href="register.php" class="text-info"> Sign Up</a>.</div>
-      </div>
-  </div>
-</div> -->
 <script>
     $(document).ready(function() {$('#loginModal').modal('show');
   $(function () {

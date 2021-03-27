@@ -24,6 +24,9 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+    <!-- Font Awesome CSS -->
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
 </head>
 <body class="about-page">
     <div class="page-header">
@@ -67,8 +70,8 @@
                             <div class="col-3 col-lg-9 flex justify-content-end align-content-center">
                                 <nav class="site-navigation flex justify-content-end align-items-center">
                                     <ul class="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
-                                        <li class="current-menu-item"><a href="index.php">Home</a></li>
-                                        <li><a href="about.php">About</a></li>
+                                        <li><a href="index.php">Home</a></li>
+                                        <li class="current-menu-item"><a href="about.php">About</a></li>
                                         <li><a href="contact.php">Contact</a></li>
                                     </ul>
 
@@ -80,7 +83,7 @@
                                     </div><!-- .hamburger-menu -->
 
                                     <div class="header-bar-cart">
-                                        <a href="#" class="flex justify-content-center align-items-center"><span aria-hidden="true" class="icon_bag_alt"></span></a>
+                                        <a href="#" class="flex justify-content-center align-items-center"></a>
                                     </div><!-- .header-bar-search -->
                                 </nav><!-- .site-navigation -->
                             </div><!-- .col -->
@@ -108,8 +111,6 @@
             <div class="col-12">
                 <div class="about-heading">
                     <h2 class="entry-title">Welcome to Online Exam Portal</h2>
-
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
                 </div><!-- .about-heading -->
             </div><!-- .col -->
 
@@ -117,80 +118,69 @@
                 <div class="about-stories">
                     <h3>Our Vission</h3>
 
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                    <p>“To raise an Army of Disciples of Jesus Christ who are life givers, fully consecrated to Jesus Christ, coming from different backgrounds and with different history, interconnected by the spirit of family, restored , trained, equipped, and sent , who have resolved to make known Jesus Christ as Lord and King in their lives, families and in all Nations in this generation”.</p>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis eros lobortis, vestibulum turpis ac, pulvinar odio. </p>
-
-                    <ul class="p-0 m-0 green-ticked">
+                    <!-- <ul class="p-0 m-0 green-ticked">
                         <li>Learning program with after-school</li>
                         <li>Positive learning environment</li>
                         <li>Learning through play</li>
-                    </ul><!-- .green-ticked -->
+                    </ul>.green-ticked -->
                 </div><!-- .about-stories -->
             </div><!-- .col -->
 
             <div class="col-12 col-lg-6">
                 <div class="about-values">
-                    <h3>Our Mission</h3>
-
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis eros lobortis, vestibulum turpis ac, pulvinar odio. </p>
-
+                    <h3>Mission Statement</h3>
                     <ul class="p-0 m-0 green-ticked">
-                        <li>Learning program with after-school</li>
-                        <li>Positive learning environment</li>
-                        <li>Learning through play</li>
-                    </ul><!-- .green-ticked -->
+                        <li>Winning souls for Christ</li>
+                        <li>Care for the souls</li>
+                        <li>Training,Preparation, and Equiping the souls for Christian life and Ministry</li>
+                        <li>Sending,Mission, and Commission</li>
+                        <li>To establish /build The Kingdom of God on Earth</li>
+                    </ul>
                 </div><!-- .about-values -->
             </div><!-- .col -->
         </div><!-- .row -->
-    </div><!-- .container -->
-    <footer class="site-footer">
+    </div><!-- .container --><br><br><br><br>
+    <footer class="site-footer bg-dark">
         <div class="footer-widgets">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="foot-about">
-                            <h2>Online Exam Portal</h2>
+                            <h2 style="color:#19c880;">Online Exam Portal</h2>
 
-                            <p>online exam port for restoration church located at Masoro industries zone for church member. </p>
+                            <p>online exam Evangelical Restoration church Rwanda. </p>
 
                             <p class="footer-copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Webiste is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by Emmy</a>
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Webiste is made by Emmanuel</a>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                         </div><!-- .foot-about -->
                     </div><!-- .col -->
 
                     <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
                         <div class="foot-contact">
-                            <h2>Contact Us</h2>
+                            <h2 style="color:#19c880;">Contact Us</h2>
 
                             <ul>
                                 <li>Email: emaje02@gmail.com</li>
                                 <li>Phone: (+250) 7832 45797</li>
-                                <li>Address: Masoro Church</li>
+                                <li>Address:Gasabo,Ndera,Masoro </li>
                             </ul>
                         </div><!-- .foot-contact -->
                     </div><!-- .col -->
 
                     <div class="col-12 col-md-6 col-lg-3 mt-5 mt-lg-0">
                         <div class="quick-links flex flex-wrap">
-                            <h2 class="w-100">Quick Links</h2>
+                            <h2 class="w-100" style="color:#19c880;">DEPARTMENTS</h2>
 
                             <ul class="w-50">
-                                <li><a href="#">About </a></li>
-                                <li><a href="#">Terms of Use </a></li>
-                                <li><a href="#">Privacy Policy </a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li>Family care</li>
+                                <li>Fellowship</li>
+                                <li>Discipleship </li>
+                                <li>Support Service</li>
                             </ul>
 
-                            <ul class="w-50">
-                                <li><a href="#">Documentation</a></li>
-                                <li><a href="#">Forums</a></li>
-                                <li><a href="#">Language Packs</a></li>
-                                <li><a href="#">Release Status</a></li>
-                            </ul>
                         </div><!-- .quick-links -->
                     </div><!-- .col -->
 

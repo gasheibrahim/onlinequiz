@@ -16,18 +16,17 @@
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
-
     <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
     <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
-    <link rel="stylesheet" href="vendors/jqvmap/dist/jqvmap.min.css">
-
+    <link rel="stylesheet" href="vendors/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="vendors/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>  
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -47,13 +46,16 @@
                         <a href="exam_category.php"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
                     <li class="active">
-                        <a href="exam_category.php"> <i class="menu-icon fa fa-dashboard"></i>Add & Edit Exam </a>
+                        <a href="exam_category.php"> <i class="menu-icon fa fa-dashboard"></i>View All Exam </a>
                     </li>
                     <li class="active">
-                        <a href="old_exam_results.php"> <i class="menu-icon fa fa-dashboard"></i>All Result </a>
+                        <a href="view_user.php"> <i class="menu-icon fa fa-dashboard"></i>View All User </a>
                     </li>
                     <li class="active">
-                        <a href="add_edit_exam_questions.php"> <i class="menu-icon fa fa-dashboard"></i>Add & Edit Questions </a>
+                        <a href="add_teacher.php"> <i class="menu-icon fa fa-dashboard"></i>Add Teacher </a>
+                    </li>
+                    <li class="active">
+                        <a href="old_exam_results.php"> <i class="menu-icon fa fa-dashboard"></i>All Exam Result </a>
                     </li>
                     <li class="active">
                         <a href="logout.php"> <i class="menu-icon fa fa-dashboard"></i>Logout </a>
@@ -79,68 +81,72 @@
 
         </header><!-- /header -->
         <!-- Header-->
-        <div class="container">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-header">
-                        <strong class="text-center">All Exam Result</strong>
-                    </div>
-                    <?php
-                    $count=0;
-                    $res=mysqli_query($con, "select * from exam_results order by id desc");
-                    $count=mysqli_num_rows($res);
-                    if($count==0)
-                    {
-                        ?>
-                            <h1 class="text-center">No Results Found</h1>
-                        <?php
-                    }
-                    else
-                    {
-                        echo "<table class='table table-bordered'>";
-                        echo "<tr style='background-color:steelblue;color:white;'>";
-                        echo "<th>"; echo "username"; echo "</th>";
-                        echo "<th>"; echo "exam type"; echo "</th>"; 
-                        echo "<th>"; echo "total question"; echo "</th>";
-                        echo "<th>"; echo "correct answer"; echo "</th>";
-                        echo "<th>"; echo "wrong answer"; echo "</th>";
-                        echo "<th>"; echo "exam_time"; echo "</th>";
-                        echo "</tr>";
-                        while($row=mysqli_fetch_array($res))
-                        {
-                            echo "<tr>";
-                            echo "<td>"; echo $row["username"]; echo "</td>";
-                            echo "<td>"; echo $row["exam_type"]; echo "</td>"; 
-                            echo "<td>"; echo $row["total_question"]; echo "</td>";
-                            echo "<td>"; echo $row["correct_answer"]; echo "</td>";
-                            echo "<td>"; echo $row["wrong_answer"]; echo "</td>";
-                            echo "<td>"; echo $row["exam_time"]; echo "</td>";
-                            echo "</tr>";
-                        }
-                        echo "</table>";
+        <div class="content mt-3">
+            <div class="animated fadeIn">
+                <div class="row">
 
-                    }
-                ?>
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong class="card-title">All Exam Result</strong>
+                            </div>
+                            <div class="card-body">
+                                <table id="bootstrap-data-table-export" class="table my-table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Username</th>
+                                            <th>Exam Type</th>
+                                            <th>Correct Answer</th>
+                                            <th>Wrong Answer</th>
+                                            <th>Total Marks</th>
+                                            <th>Exam Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php
+                                        $count=0;
+                                        $res=mysqli_query($con, "select * from exam_results order by id asc");
+                                        $count=mysqli_num_rows($res);
+                                        if($count==0)
+                                        {
+                                            ?>
+                                                <h1 class="text-center">No Results Found</h1>
+                                            <?php
+                                        }
+                                        else
+                                        {
+                                            while($row=mysqli_fetch_array($res))
+                                            {
+                                                echo "<tr>";
+                                                echo "<td>"; echo $row["id"]; echo "</td>";
+                                                echo "<td>"; echo $row["username"]; echo "</td>";
+                                                echo "<td>"; echo $row["exam_type"]; echo "</td>"; 
+                                                echo "<td>"; echo $row["correct_answer"]; echo "</td>";
+                                                echo "<td>"; echo $row["wrong_answer"]; echo "</td>";
+                                                echo "<td>"; echo $row["correct_answer"];echo "/";echo $row["total_question"]; echo "</td>";
+                                                echo "<td>"; echo $row["exam_time"]; echo "</td>";
+                                                echo "</tr>";
+                                            }
+
+                                        }
+                                    ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
-            </div>
-        </div>
+            </div><!-- .animated -->
+        </div><!-- .content -->
+        <div id="elementH"></div>
+        <button type="button" id="btn-download" onclick="generatePdf()" class="btn btn-success" style="margin-left:25rem;">Download All Results</button>
 
     </div><!-- /#right-panel -->
 
     <!-- Right Panel -->
-
-    <?php
-        if(isset($_POST["submit1"]))
-        {
-            mysqli_query($con, "insert into exam_category values(NULL, '$_POST[examname]','$_POST[examtime]')") or die(mysqli_error($con));
-            ?>
-            <script type="text/javascript">
-                alert("Exam added Succefully");
-                window.location.href=window.location.href;
-            </script>
-            <?php
-        }
-    ?>
 
     <script src="vendors/jquery/dist/jquery.min.js"></script>
     <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
@@ -148,12 +154,40 @@
     <script src="assets/js/main.js"></script>
 
 
-    <script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
-    <script src="assets/js/dashboard.js"></script>
-    <script src="assets/js/widgets.js"></script>
-    <script src="vendors/jqvmap/dist/jquery.vmap.min.js"></script>
-    <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-    <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="vendors/jszip/dist/jszip.min.js"></script>
+    <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <script src="assets/js/init-scripts/data-table/datatables-init.js"></script>
+    <script src="./vendor/jspdf/dist/jspdf.min.js"></script>
+    <script src="./vendor/jspdf-autotable/dist/jspdf.plugin.autotable.min.js"></script>
+    <script>
+        function generatePdf(){
+            var doc = new jsPDF();
+            // doc.setFont("helvetica");
+            // doc.setFontType("bold");
+            // doc.text(20, 50, 'Thank You For Attending Exam.');
+            doc.autoTable({ html: '.my-table' })
+            // var elementHTML = $('#content').html();
+            // var specialElementHandlers = {
+            //     '#elementH': function (element, renderer) {
+            //         return true;
+            //     }
+            // };
+            // doc.fromHTML(elementHTML, 15, 15, {
+            //     'width': 170,
+            //     'elementHandlers': specialElementHandlers
+            // });
+            // Save the PDF
+            doc.save('result-document.pdf');
+        }
+    </script>
     <script>
         (function($) {
             "use strict";

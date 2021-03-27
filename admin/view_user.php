@@ -16,19 +16,17 @@
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
-
     <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
     <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
-    <link rel="stylesheet" href="vendors/jqvmap/dist/jqvmap.min.css">
-
+    <link rel="stylesheet" href="vendors/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="vendors/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
-
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>  
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
 </head>
@@ -84,14 +82,17 @@
 
         </header><!-- /header -->
         <!-- Header-->
-        <div class="container">
-            <div class="col-lg-12">
+        <div class="content mt-3">
+            <div class="animated fadeIn">
+                <div class="row">
+
+                    <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
                                 <strong class="card-title">All User</strong>
                             </div>
                             <div class="card-body">
-                                <table class="table table-bordered">
+                                <table id="bootstrap-data-table-export" class="table my-table table-striped table-bordered">
                                     <thead>
                                         <tr>
                                             <th scope="col">Id</th>
@@ -105,7 +106,6 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-
                                     <?php
                                         $res=mysqli_query($con, "select * from registration");
                                         while($row=mysqli_fetch_array($res))
@@ -124,17 +124,23 @@
                                             <?php
                                         }
                                     ?>
-                                        
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-        </div>
+
+
+                </div>
+            </div><!-- .animated -->
+        </div><!-- .content -->
+        <div id="elementH"></div>
+        <button type="button" id="btn-download" onclick="generatePdf()" class="btn btn-success" style="margin-left:25rem;">Download All Users</button>
 
     </div><!-- /#right-panel -->
 
     <!-- Right Panel -->
+    
 
     <script src="vendors/jquery/dist/jquery.min.js"></script>
     <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
@@ -142,12 +148,40 @@
     <script src="assets/js/main.js"></script>
 
 
-    <script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
-    <script src="assets/js/dashboard.js"></script>
-    <script src="assets/js/widgets.js"></script>
-    <script src="vendors/jqvmap/dist/jquery.vmap.min.js"></script>
-    <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-    <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="vendors/jszip/dist/jszip.min.js"></script>
+    <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <script src="assets/js/init-scripts/data-table/datatables-init.js"></script>
+    <script src="./vendor/jspdf/dist/jspdf.min.js"></script>
+    <script src="./vendor/jspdf-autotable/dist/jspdf.plugin.autotable.min.js"></script>
+    <script>
+        function generatePdf(){
+            var doc = new jsPDF();
+            // doc.setFont("helvetica");
+            // doc.setFontType("bold");
+            // doc.text(20, 50, 'Thank You For Attending Exam.');
+            doc.autoTable({ html: '.my-table' })
+            // var elementHTML = $('#content').html();
+            // var specialElementHandlers = {
+            //     '#elementH': function (element, renderer) {
+            //         return true;
+            //     }
+            // };
+            // doc.fromHTML(elementHTML, 15, 15, {
+            //     'width': 170,
+            //     'elementHandlers': specialElementHandlers
+            // });
+            // Save the PDF
+            doc.save('user-document.pdf');
+        }
+    </script>
     <script>
         (function($) {
             "use strict";

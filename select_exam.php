@@ -32,6 +32,9 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+    <!-- Font Awesome CSS -->
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
 </head>
 <body class="about-page">
     <div class="page-header">
@@ -85,7 +88,7 @@
                                     </div><!-- .hamburger-menu -->
 
                                     <div class="header-bar-cart">
-                                        <a href="#" class="flex justify-content-center align-items-center"><span aria-hidden="true" class="icon_bag_alt"></span></a>
+                                        <a href="#" class="flex justify-content-center align-items-center"></a>
                                     </div><!-- .header-bar-search -->
                                 </nav><!-- .site-navigation -->
                 </nav>
@@ -130,51 +133,45 @@
 
 
 
-<footer class="site-footer">
+<footer class="site-footer bg-dark">
         <div class="footer-widgets">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="foot-about">
-                            <h2>Online Exam Portal</h2>
+                            <h2 style="color:#19c880;">Online Exam Portal</h2>
 
-                            <p>online exam port for restoration church located at Masoro industries zone for church member. </p>
+                            <p>online exam Evangelical Restoration church Rwanda. </p>
 
                             <p class="footer-copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Webiste is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by Emmy</a>
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Webiste is made by Emmanuel</a>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                         </div><!-- .foot-about -->
                     </div><!-- .col -->
 
                     <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
                         <div class="foot-contact">
-                            <h2>Contact Us</h2>
+                            <h2 style="color:#19c880;">Contact Us</h2>
 
                             <ul>
                                 <li>Email: emaje02@gmail.com</li>
                                 <li>Phone: (+250) 7832 45797</li>
-                                <li>Address: Masoro Church</li>
+                                <li>Address:Gasabo,Ndera,Masoro </li>
                             </ul>
                         </div><!-- .foot-contact -->
                     </div><!-- .col -->
 
                     <div class="col-12 col-md-6 col-lg-3 mt-5 mt-lg-0">
                         <div class="quick-links flex flex-wrap">
-                            <h2 class="w-100">Quick Links</h2>
+                            <h2 class="w-100" style="color:#19c880;">DEPARTMENTS</h2>
 
                             <ul class="w-50">
-                                <li><a href="#">About </a></li>
-                                <li><a href="#">Terms of Use </a></li>
-                                <li><a href="#">Privacy Policy </a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li>Family care</li>
+                                <li>Fellowship</li>
+                                <li>Discipleship </li>
+                                <li>Support Service</li>
                             </ul>
 
-                            <ul class="w-50">
-                                <li><a href="#">Documentation</a></li>
-                                <li><a href="#">Forums</a></li>
-                                <li><a href="#">Language Packs</a></li>
-                                <li><a href="#">Release Status</a></li>
-                            </ul>
                         </div><!-- .quick-links -->
                     </div><!-- .col -->
 
@@ -182,49 +179,6 @@
             </div><!-- .container -->
         </div><!-- .footer-widgets -->
     </footer><!-- .site-footer -->
-    <!-- <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header border-bottom-0">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="form-title text-center">
-          <h4>Login</h4>
-        </div>
-        <div class="d-flex flex-column text-center">
-          <form>
-            <div class="form-group">
-              <input type="email" class="form-control" id="email1"placeholder="Your email address...">
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control" id="password1" placeholder="Your password...">
-            </div>
-            <button type="button" class="btn btn-info btn-block btn-round">Login</button>
-          </form>
-          
-          <div class="text-center text-muted delimiter">or use a social network</div>
-          <div class="d-flex justify-content-center social-buttons">
-            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Twitter">
-              <i class="fab fa-twitter"></i>
-            </button>
-            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Facebook">
-              <i class="fab fa-facebook"></i>
-            </button>
-            <button type="button" class="btn btn-secondary btn-round" data-toggle="tooltip" data-placement="top" title="Linkedin">
-              <i class="fab fa-linkedin"></i>
-            </button>
-          </di>
-        </div>
-      </div>
-    </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <div class="signup-section">Not a member yet? <a href="register.php" class="text-info"> Sign Up</a>.</div>
-      </div>
-  </div>
-</div> -->
 <script>
     $(document).ready(function() {$('#loginModal').modal('show');
   $(function () {

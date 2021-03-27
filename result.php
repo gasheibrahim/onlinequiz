@@ -95,7 +95,7 @@ header("location:login.php");
                                     </div><!-- .hamburger-menu -->
 
                                     <div class="header-bar-cart">
-                                        <a href="#" class="flex justify-content-center align-items-center"><span aria-hidden="true" class="icon_bag_alt"></span></a>
+                                        <a href="#" class="flex justify-content-center align-items-center"></a>
                                     </div><!-- .header-bar-search -->
                                 </nav><!-- .site-navigation -->
                 </nav>
@@ -106,9 +106,9 @@ header("location:login.php");
 
 <div class="container">
 <div class="row" style="margin-left:15rem;">
-    <div class="col-md-8">
+    <div class="col-md-8" id="content">
         <h4 class="text-center">Thank You For Attending Exam</h4>
-        <table class='table table-bordered'>
+        <table class='table table-bordered' id="my-table">
             <tr>
                 <th>Fistname</th>
                 <th>Lastname</th>
@@ -163,7 +163,9 @@ header("location:login.php");
         </table>
     </div>
 </div>
-<input type="button" id="create_pdf" value="Generate PDF" style="margin-left:25rem;background-color:#19c880;color:#fff;font-size:25px;text-decoration: none;text-transform: uppercase;">  
+<div id="elementH"></div>
+<!-- <input type="button" id="create_pdf" value="Generate PDF" style="margin-left:25rem;background-color:#19c880;color:#fff;font-size:25px;text-decoration: none;text-transform: uppercase;">  -->
+<button type="button" id="btn-download" onclick="generatePdf()" class="btn btn-success" style="margin-left:30rem;">Download Result</button>
 <!-- <div class="row">
 <div class="col-md-8">
 <div class="card" style="margin-left:20rem;background-color:#19c880;">
@@ -243,51 +245,45 @@ header("location:login.php");
 </div>
 </div> -->
 </div><br><br><br><br>
-<footer class="site-footer">
+<footer class="site-footer bg-dark">
         <div class="footer-widgets">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="foot-about">
-                            <h2>Online Exam Portal</h2>
+                            <h2 style="color:#19c880;">Online Exam Portal</h2>
 
-                            <p>online exam port for restoration church located at Masoro industries zone for church member. </p>
+                            <p>online exam Evangelical Restoration church Rwanda. </p>
 
                             <p class="footer-copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Webiste is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by Emmy</a>
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Webiste is made by Emmanuel</a>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                         </div><!-- .foot-about -->
                     </div><!-- .col -->
 
                     <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
                         <div class="foot-contact">
-                            <h2>Contact Us</h2>
+                            <h2 style="color:#19c880;">Contact Us</h2>
 
                             <ul>
                                 <li>Email: emaje02@gmail.com</li>
                                 <li>Phone: (+250) 7832 45797</li>
-                                <li>Address: Masoro Church</li>
+                                <li>Address:Gasabo,Ndera,Masoro </li>
                             </ul>
                         </div><!-- .foot-contact -->
                     </div><!-- .col -->
 
                     <div class="col-12 col-md-6 col-lg-3 mt-5 mt-lg-0">
                         <div class="quick-links flex flex-wrap">
-                            <h2 class="w-100">Quick Links</h2>
+                            <h2 class="w-100" style="color:#19c880;">DEPARTMENTS</h2>
 
                             <ul class="w-50">
-                                <li><a href="#">About </a></li>
-                                <li><a href="#">Terms of Use </a></li>
-                                <li><a href="#">Privacy Policy </a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li>Family care</li>
+                                <li>Fellowship</li>
+                                <li>Discipleship </li>
+                                <li>Support Service</li>
                             </ul>
 
-                            <ul class="w-50">
-                                <li><a href="#">Documentation</a></li>
-                                <li><a href="#">Forums</a></li>
-                                <li><a href="#">Language Packs</a></li>
-                                <li><a href="#">Release Status</a></li>
-                            </ul>
                         </div><!-- .quick-links -->
                     </div><!-- .col -->
 
@@ -295,28 +291,6 @@ header("location:login.php");
             </div><!-- .container -->
         </div><!-- .footer-widgets -->
     </footer><!-- .site-footer -->
-<!-- <script type="text/javascript">
-    setInterval(function(){
-        timer();
-    },1000);
-    function timer(){
-        var xmlhttp=new XMLHttpRequest();
-        xmlhttp.onreadystatechange=function(){
-            if(xmlhttp.readyState==4 && xmlhttp.status==200){
-                if(xmlhttp.responseText=="00:00:01")
-                {
-                    window.location="result.php";
-                }
-                document.getElementById("countdowntimer").innerHTML=xmlhttp.responseText;
-            }
-        };
-        xmlhttp.open("GET","forajax/load_timer.php",true);
-        xmlhttp.send(null);
-        }
-        
-    }
-
-</script> -->
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -332,6 +306,31 @@ header("location:login.php");
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
     <!-- Bootstrap JS -->
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+    <script src="./vendor/jspdf/dist/jspdf.min.js"></script>
+    <script src="./vendor/jspdf-autotable/dist/jspdf.plugin.autotable.min.js"></script>
+    <script>
+        function generatePdf()
+        {
+            var doc = new jsPDF();
+            // doc.setFont("helvetica");
+            // doc.setFontType("bold");
+            // doc.text(20, 50, 'Thank You For Attending Exam.');
+            doc.autoTable({ html: '#my-table' })
+            // var elementHTML = $('#content').html();
+            // var specialElementHandlers = {
+            //     '#elementH': function (element, renderer) {
+            //         return true;
+            //     }
+            // };
+            // doc.fromHTML(elementHTML, 15, 15, {
+            //     'width': 170,
+            //     'elementHandlers': specialElementHandlers
+            // });
+            // Save the PDF
+            doc.save('result-document.pdf');
+        }
+    </script>
+
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
